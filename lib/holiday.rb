@@ -67,4 +67,7 @@ def all_holidays_with_bbq(holiday_hash)
     festival.each do |festival_name, activity|
       if activity.include?("BBQ")
         return festival_name
+      end
+    end
+  end
 end
