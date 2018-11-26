@@ -21,7 +21,6 @@ def second_supply_for_fourth_of_july(holiday_hash)
     festival.each do |festival_name, activity|
       if festival_name==:fourth_of_july
         return activity[1]
-
       end
     end
   end
