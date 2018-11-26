@@ -68,4 +68,8 @@ def all_holidays_with_bbq(holiday_hash)
     festival.collect do |festival_name, activity|
       if activity.include?("BBQ")
         my_array<<:festival_name
+      end
+    end
+  end
+  my_array
 end
