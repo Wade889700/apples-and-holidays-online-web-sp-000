@@ -17,13 +17,12 @@ holiday_supplies = {
 }
 def second_supply_for_fourth_of_july(holiday_hash)
   # return the second element in the 4th of July array
-  holiday_hash.each do |season, festival|
-    festival.each do |festival_name, activity|
-      if festival_name==:fourth_of_july
-        return activity[1]
-      end
-    end
-  end
+  holiday_hash.map do |season, holiday|
+   holiday.map do |holiday, item|
+     holiday if item.include?("BBQ")
+   end
+ end.flatten.compact
+end
 end
 
 def add_supply_to_winter_holidays(holiday_hash, supply)
