@@ -20,7 +20,7 @@ def second_supply_for_fourth_of_july(holiday_hash)
   holiday_hash.each do |season, festival|
     festival.each do |festival_name, activity|
       if festival_name==:fourth_of_july
-        
+
       end
     end
   end
@@ -49,7 +49,7 @@ def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
   holiday_hash.each do |season, festival|
     if season == :winter
-      return festival
+      return festival.value.flatten
     end
   end
 end
